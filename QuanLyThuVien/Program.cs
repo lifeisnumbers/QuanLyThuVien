@@ -15,17 +15,6 @@ namespace QuanLyThuVien
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            /*Application.Run(new ThemDocGia());
-            Application.Run(new NhapDauSachCu());*/
-            //Application.Run(new ThemDocGia());
-
-            //Application.Run(new NhapDauSachCu());
-
-            Application.Run(new PhieuMuonSach());
-
-            Application.Run(new PhieuTraSach());
-
-            Application.Run(new PhieuThu());
 
         }
     }
