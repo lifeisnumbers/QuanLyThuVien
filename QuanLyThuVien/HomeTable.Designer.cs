@@ -43,8 +43,11 @@
             thốngKêSáchTrảTrễToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            monthCalendar1 = new MonthCalendar();
             panel2 = new Panel();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             menuStrip1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -107,14 +110,14 @@
             // 
             mượnSáchToolStripMenuItem.Image = (Image)resources.GetObject("mượnSáchToolStripMenuItem.Image");
             mượnSáchToolStripMenuItem.Name = "mượnSáchToolStripMenuItem";
-            mượnSáchToolStripMenuItem.Size = new Size(224, 26);
+            mượnSáchToolStripMenuItem.Size = new Size(173, 26);
             mượnSáchToolStripMenuItem.Text = "Mượn Sách";
             // 
             // trảSáchToolStripMenuItem
             // 
             trảSáchToolStripMenuItem.Image = (Image)resources.GetObject("trảSáchToolStripMenuItem.Image");
             trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
-            trảSáchToolStripMenuItem.Size = new Size(224, 26);
+            trảSáchToolStripMenuItem.Size = new Size(173, 26);
             trảSáchToolStripMenuItem.Text = "Trả Sách";
             // 
             // lậpBáoCáoToolStripMenuItem
@@ -148,10 +151,17 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(monthCalendar1);
             panel1.Location = new Point(0, 43);
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 606);
             panel1.TabIndex = 2;
+            // 
+            // monthCalendar1
+            // 
+            monthCalendar1.Location = new Point(0, 117);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -176,6 +186,7 @@
             Text = "Quản lý thư viện";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -196,5 +207,7 @@
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Panel panel1;
         private Panel panel2;
+        private MonthCalendar monthCalendar1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
