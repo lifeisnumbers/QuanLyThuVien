@@ -30,10 +30,11 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
+            cmbNXB = new ComboBox();
+            cmbDauSach = new ComboBox();
             label7 = new Label();
             txbNamXuatBan = new TextBox();
             label6 = new Label();
-            txbNhaXuatBan = new TextBox();
             label3 = new Label();
             txbSach = new TextBox();
             label2 = new Label();
@@ -44,7 +45,6 @@
             btnNhapSach = new Button();
             txbMoney = new TextBox();
             label9 = new Label();
-            cmbDauSach = new ComboBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numSach).BeginInit();
             panel1.SuspendLayout();
@@ -62,11 +62,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cmbNXB);
             groupBox1.Controls.Add(cmbDauSach);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(txbNamXuatBan);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(txbNhaXuatBan);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(txbSach);
             groupBox1.Controls.Add(label2);
@@ -76,6 +76,22 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin đầu sách:";
+            // 
+            // cmbNXB
+            // 
+            cmbNXB.FormattingEnabled = true;
+            cmbNXB.Location = new Point(217, 127);
+            cmbNXB.Name = "cmbNXB";
+            cmbNXB.Size = new Size(198, 29);
+            cmbNXB.TabIndex = 13;
+            // 
+            // cmbDauSach
+            // 
+            cmbDauSach.FormattingEnabled = true;
+            cmbDauSach.Location = new Point(217, 63);
+            cmbDauSach.Name = "cmbDauSach";
+            cmbDauSach.Size = new Size(198, 29);
+            cmbDauSach.TabIndex = 12;
             // 
             // label7
             // 
@@ -103,13 +119,6 @@
             label6.Size = new Size(177, 29);
             label6.TabIndex = 9;
             label6.Text = "Năm xuất bản:";
-            // 
-            // txbNhaXuatBan
-            // 
-            txbNhaXuatBan.Location = new Point(217, 127);
-            txbNhaXuatBan.Name = "txbNhaXuatBan";
-            txbNhaXuatBan.Size = new Size(198, 28);
-            txbNhaXuatBan.TabIndex = 6;
             // 
             // label3
             // 
@@ -188,6 +197,7 @@
             btnNhapSach.TabIndex = 15;
             btnNhapSach.Text = "Nhập sách";
             btnNhapSach.UseVisualStyleBackColor = true;
+            btnNhapSach.Click += btnNhapSach_Click;
             // 
             // txbMoney
             // 
@@ -206,14 +216,6 @@
             label9.TabIndex = 14;
             label9.Text = "Trị giá:";
             // 
-            // cmbDauSach
-            // 
-            cmbDauSach.FormattingEnabled = true;
-            cmbDauSach.Location = new Point(217, 63);
-            cmbDauSach.Name = "cmbDauSach";
-            cmbDauSach.Size = new Size(198, 29);
-            cmbDauSach.TabIndex = 12;
-            // 
             // NhapDauSachMoi
             // 
             AutoScaleDimensions = new SizeF(11F, 21F);
@@ -226,6 +228,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "NhapDauSachMoi";
             Text = "Nhập đầu sách mới ";
+            Load += NhapDauSachMoi_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numSach).EndInit();
@@ -245,7 +248,6 @@
         private Label label7;
         private TextBox txbNamXuatBan;
         private Label label6;
-        private TextBox txbNhaXuatBan;
         private Label label3;
         private Label label8;
         private Panel panel1;
@@ -254,5 +256,6 @@
         private Button btnCanel;
         private Button btnNhapSach;
         private ComboBox cmbDauSach;
+        private ComboBox cmbNXB;
     }
 }
