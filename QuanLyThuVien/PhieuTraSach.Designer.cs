@@ -54,28 +54,29 @@
             btnMuonSach.TabIndex = 10;
             btnMuonSach.Text = "Trả sách";
             btnMuonSach.UseVisualStyleBackColor = true;
+            btnMuonSach.Click += btnMuonSach_Click;
             // 
             // txbMaCuonSach
             // 
-            txbMaCuonSach.Location = new Point(359, 148);
+            txbMaCuonSach.Location = new Point(401, 150);
             txbMaCuonSach.Name = "txbMaCuonSach";
-            txbMaCuonSach.Size = new Size(185, 25);
+            txbMaCuonSach.Size = new Size(185, 28);
             txbMaCuonSach.TabIndex = 8;
             // 
             // txbMaDocGia
             // 
-            txbMaDocGia.Location = new Point(359, 101);
+            txbMaDocGia.Location = new Point(401, 102);
             txbMaDocGia.Name = "txbMaDocGia";
-            txbMaDocGia.Size = new Size(185, 25);
+            txbMaDocGia.Size = new Size(185, 28);
             txbMaDocGia.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(204, 149);
+            label3.Location = new Point(173, 147);
             label3.Name = "label3";
-            label3.Size = new Size(149, 24);
+            label3.Size = new Size(180, 29);
             label3.TabIndex = 9;
             label3.Text = "Mã cuốn sách:";
             // 
@@ -83,9 +84,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(233, 99);
+            label2.Location = new Point(204, 99);
             label2.Name = "label2";
-            label2.Size = new Size(120, 24);
+            label2.Size = new Size(146, 29);
             label2.TabIndex = 7;
             label2.Text = "Mã độc giả:";
             // 
@@ -95,13 +96,13 @@
             label1.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(277, 35);
             label1.Name = "label1";
-            label1.Size = new Size(247, 40);
+            label1.Size = new Size(288, 46);
             label1.TabIndex = 5;
             label1.Text = "Phiếu trả sách";
             // 
             // PhieuTraSach
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(788, 324);
             Controls.Add(btnCanel);

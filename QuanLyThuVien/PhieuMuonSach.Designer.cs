@@ -43,7 +43,7 @@
             label1.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(206, 26);
             label1.Name = "label1";
-            label1.Size = new Size(303, 40);
+            label1.Size = new Size(353, 46);
             label1.TabIndex = 0;
             label1.Text = "Phiếu mượn sách";
             // 
@@ -53,7 +53,7 @@
             label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(162, 90);
             label2.Name = "label2";
-            label2.Size = new Size(120, 24);
+            label2.Size = new Size(146, 29);
             label2.TabIndex = 1;
             label2.Text = "Mã độc giả:";
             // 
@@ -63,22 +63,22 @@
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(133, 140);
             label3.Name = "label3";
-            label3.Size = new Size(149, 24);
+            label3.Size = new Size(180, 29);
             label3.TabIndex = 2;
             label3.Text = "Mã cuốn sách:";
             // 
             // txbMaDocGia
             // 
-            txbMaDocGia.Location = new Point(288, 92);
+            txbMaDocGia.Location = new Point(358, 90);
             txbMaDocGia.Name = "txbMaDocGia";
-            txbMaDocGia.Size = new Size(185, 25);
+            txbMaDocGia.Size = new Size(185, 28);
             txbMaDocGia.TabIndex = 1;
             // 
             // txbMaCuonSach
             // 
-            txbMaCuonSach.Location = new Point(288, 139);
+            txbMaCuonSach.Location = new Point(358, 140);
             txbMaCuonSach.Name = "txbMaCuonSach";
-            txbMaCuonSach.Size = new Size(185, 25);
+            txbMaCuonSach.Size = new Size(185, 28);
             txbMaCuonSach.TabIndex = 2;
             // 
             // btnMuonSach
@@ -89,6 +89,7 @@
             btnMuonSach.TabIndex = 3;
             btnMuonSach.Text = "Cho Mượn";
             btnMuonSach.UseVisualStyleBackColor = true;
+            btnMuonSach.Click += btnMuonSach_Click;
             // 
             // btnCanel
             // 
@@ -101,7 +102,7 @@
             // 
             // PhieuMuonSach
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(711, 312);
             Controls.Add(btnCanel);

@@ -9,7 +9,7 @@ namespace QuanLyThuVien
         [STAThread]
         static void Main()
         {
-            ConnectionString = "Data Source=YAMIKARASU;Initial Catalog=LibraryManagement;Integrated Security=True;";
+            ConnectionString = "Data Source=.\\sqlexpress;Initial Catalog=QuanLyThuVien;Integrated Security = True;";
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
@@ -17,6 +17,15 @@ namespace QuanLyThuVien
 
             /*Application.Run(new ThemDocGia());
             Application.Run(new NhapDauSachCu());*/
+            //Application.Run(new ThemDocGia());
+
+            //Application.Run(new NhapDauSachCu());
+
+            Application.Run(new PhieuMuonSach());
+
+            Application.Run(new PhieuTraSach());
+
+            Application.Run(new PhieuThu());
 
         }
     }

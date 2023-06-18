@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThuVien
 {
-    partial class PhieuMuon
+    partial class PhieuThu
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(134, 28);
             label1.Name = "label1";
-            label1.Size = new Size(299, 35);
+            label1.Size = new Size(359, 43);
             label1.TabIndex = 0;
             label1.Text = "Phiếu Thu Tiền Phạt";
             // 
@@ -53,7 +53,7 @@
             label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(56, 96);
             label2.Name = "label2";
-            label2.Size = new Size(120, 24);
+            label2.Size = new Size(146, 29);
             label2.TabIndex = 1;
             label2.Text = "Mã độc giả:";
             // 
@@ -61,7 +61,7 @@
             // 
             txbMaDocGia.Location = new Point(215, 93);
             txbMaDocGia.Name = "txbMaDocGia";
-            txbMaDocGia.Size = new Size(180, 25);
+            txbMaDocGia.Size = new Size(180, 28);
             txbMaDocGia.TabIndex = 2;
             // 
             // label3
@@ -70,7 +70,7 @@
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(81, 148);
             label3.Name = "label3";
-            label3.Size = new Size(95, 24);
+            label3.Size = new Size(115, 29);
             label3.TabIndex = 3;
             label3.Text = "Tiền thu:";
             // 
@@ -78,7 +78,7 @@
             // 
             txbMaCuonSach.Location = new Point(215, 150);
             txbMaCuonSach.Name = "txbMaCuonSach";
-            txbMaCuonSach.Size = new Size(180, 25);
+            txbMaCuonSach.Size = new Size(180, 28);
             txbMaCuonSach.TabIndex = 4;
             // 
             // button1
@@ -89,6 +89,7 @@
             button1.TabIndex = 5;
             button1.Text = "Trả tiền";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -99,9 +100,9 @@
             button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = true;
             // 
-            // PhieuMuon
+            // PhieuThu
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(550, 295);
             Controls.Add(button2);
@@ -113,7 +114,7 @@
             Controls.Add(label1);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "PhieuMuon";
+            Name = "PhieuThu";
             Text = "Phiếu Thu Tiền Phạt";
             ResumeLayout(false);
             PerformLayout();
