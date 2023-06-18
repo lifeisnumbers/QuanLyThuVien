@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class NhapDauSachMoi : Form
+    public partial class PhieuTraSach : Form
     {
-        public NhapDauSachMoi()
+        public PhieuTraSach()
         {
             InitializeComponent();
         }
+
+
     }
 }
