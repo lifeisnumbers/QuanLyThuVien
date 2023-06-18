@@ -11,7 +11,11 @@ namespace QuanLyThuVien
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+<<<<<<< HEAD
             Application.Run(new HomeTable());
+=======
+            Application.Run(new Form2());
+>>>>>>> 43b1facbe6ef0e06e67271645ad92addea85559e
         }
     }
 }
