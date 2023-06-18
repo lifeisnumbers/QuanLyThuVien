@@ -45,6 +45,7 @@
             btnCanel.TabIndex = 11;
             btnCanel.Text = "Hủy";
             btnCanel.UseVisualStyleBackColor = true;
+            btnCanel.Click += btnCanel_Click;
             // 
             // btnMuonSach
             // 
@@ -113,6 +114,7 @@
             Controls.Add(label1);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "PhieuTraSach";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Phiếu Trả Sách";
             ResumeLayout(false);
             PerformLayout();

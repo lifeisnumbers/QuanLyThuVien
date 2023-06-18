@@ -17,6 +17,10 @@ namespace QuanLyThuVien
             InitializeComponent();
         }
 
-
+        private void btnCanel_Click(object sender, EventArgs e)
+        {
+            txbMaDocGia.Text = string.Empty;
+            txbMaCuonSach.Text = string.Empty;
+        }
     }
 }

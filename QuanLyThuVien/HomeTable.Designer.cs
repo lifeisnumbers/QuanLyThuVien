@@ -42,9 +42,10 @@
             mượnSáchTheoThểLoạiToolStripMenuItem = new ToolStripMenuItem();
             thốngKêSáchTrảTrễToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
+            thoátToolStripMenuItem1 = new ToolStripMenuItem();
             panel1 = new Panel();
             monthCalendar1 = new MonthCalendar();
-            panel2 = new Panel();
+            panelShowForm = new Panel();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
@@ -54,7 +55,7 @@
             // 
             menuStrip1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { lậpĐộcGiảToolStripMenuItem, thêmSáchToolStripMenuItem, traCứuSáchToolStripMenuItem, mượnTrảSáchToolStripMenuItem, lậpBáoCáoToolStripMenuItem, thoátToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { lậpĐộcGiảToolStripMenuItem, thêmSáchToolStripMenuItem, traCứuSáchToolStripMenuItem, mượnTrảSáchToolStripMenuItem, lậpBáoCáoToolStripMenuItem, thoátToolStripMenuItem, thoátToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1215, 28);
@@ -67,6 +68,7 @@
             lậpĐộcGiảToolStripMenuItem.Name = "lậpĐộcGiảToolStripMenuItem";
             lậpĐộcGiảToolStripMenuItem.Size = new Size(128, 24);
             lậpĐộcGiảToolStripMenuItem.Text = "Lập Độc Giả";
+            lậpĐộcGiảToolStripMenuItem.Click += lậpĐộcGiảToolStripMenuItem_Click;
             // 
             // thêmSáchToolStripMenuItem
             // 
@@ -97,6 +99,7 @@
             traCứuSáchToolStripMenuItem.Name = "traCứuSáchToolStripMenuItem";
             traCứuSáchToolStripMenuItem.Size = new Size(139, 24);
             traCứuSáchToolStripMenuItem.Text = "Tra Cứu Sách";
+            traCứuSáchToolStripMenuItem.Click += traCứuSáchToolStripMenuItem_Click;
             // 
             // mượnTrảSáchToolStripMenuItem
             // 
@@ -112,6 +115,7 @@
             mượnSáchToolStripMenuItem.Name = "mượnSáchToolStripMenuItem";
             mượnSáchToolStripMenuItem.Size = new Size(173, 26);
             mượnSáchToolStripMenuItem.Text = "Mượn Sách";
+            mượnSáchToolStripMenuItem.Click += mượnSáchToolStripMenuItem_Click;
             // 
             // trảSáchToolStripMenuItem
             // 
@@ -119,6 +123,7 @@
             trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
             trảSáchToolStripMenuItem.Size = new Size(173, 26);
             trảSáchToolStripMenuItem.Text = "Trả Sách";
+            trảSáchToolStripMenuItem.Click += trảSáchToolStripMenuItem_Click;
             // 
             // lậpBáoCáoToolStripMenuItem
             // 
@@ -146,8 +151,16 @@
             // 
             thoátToolStripMenuItem.Image = (Image)resources.GetObject("thoátToolStripMenuItem.Image");
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(83, 24);
-            thoátToolStripMenuItem.Text = "Thoát";
+            thoátToolStripMenuItem.Size = new Size(166, 24);
+            thoátToolStripMenuItem.Text = "Thay đổi quy định";
+            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
+            // 
+            // thoátToolStripMenuItem1
+            // 
+            thoátToolStripMenuItem1.Image = (Image)resources.GetObject("thoátToolStripMenuItem1.Image");
+            thoátToolStripMenuItem1.Name = "thoátToolStripMenuItem1";
+            thoátToolStripMenuItem1.Size = new Size(83, 24);
+            thoátToolStripMenuItem1.Text = "Thoát";
             // 
             // panel1
             // 
@@ -163,26 +176,27 @@
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
             // 
-            // panel2
+            // panelShowForm
             // 
-            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
-            panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Location = new Point(256, 43);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(959, 606);
-            panel2.TabIndex = 3;
+            panelShowForm.BackgroundImage = (Image)resources.GetObject("panelShowForm.BackgroundImage");
+            panelShowForm.BackgroundImageLayout = ImageLayout.Stretch;
+            panelShowForm.Location = new Point(256, 43);
+            panelShowForm.Name = "panelShowForm";
+            panelShowForm.Size = new Size(959, 606);
+            panelShowForm.TabIndex = 3;
             // 
             // HomeTable
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1215, 648);
-            Controls.Add(panel2);
+            Controls.Add(panelShowForm);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             MainMenuStrip = menuStrip1;
             Name = "HomeTable";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản lý thư viện";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -206,8 +220,9 @@
         private ToolStripMenuItem thốngKêSáchTrảTrễToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
         private Panel panel1;
-        private Panel panel2;
+        private Panel panelShowForm;
         private MonthCalendar monthCalendar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private ToolStripMenuItem thoátToolStripMenuItem1;
     }
 }

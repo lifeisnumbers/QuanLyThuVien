@@ -98,6 +98,7 @@
             btnCanel.TabIndex = 4;
             btnCanel.Text = "Hủy";
             btnCanel.UseVisualStyleBackColor = true;
+            btnCanel.Click += btnCanel_Click;
             // 
             // PhieuMuonSach
             // 
@@ -113,6 +114,7 @@
             Controls.Add(label1);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "PhieuMuonSach";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Phiếu mượn sách";
             ResumeLayout(false);
             PerformLayout();

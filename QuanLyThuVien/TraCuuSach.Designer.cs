@@ -42,7 +42,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(274, 20);
+            label1.Location = new Point(239, 31);
             label1.Name = "label1";
             label1.Size = new Size(317, 55);
             label1.TabIndex = 0;
@@ -57,7 +57,7 @@
             groupBox1.Location = new Point(22, 89);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(719, 409);
-            groupBox1.TabIndex = 1;
+            groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Danh sách sách:";
             // 
@@ -93,7 +93,7 @@
             txbTimKiem.Location = new Point(190, 47);
             txbTimKiem.Name = "txbTimKiem";
             txbTimKiem.Size = new Size(280, 30);
-            txbTimKiem.TabIndex = 0;
+            txbTimKiem.TabIndex = 1;
             // 
             // TraCuuSach
             // 
@@ -105,7 +105,9 @@
             Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "TraCuuSach";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Tra cứu sách";
+            Load += TraCuuSach_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataDanhSachSach).EndInit();

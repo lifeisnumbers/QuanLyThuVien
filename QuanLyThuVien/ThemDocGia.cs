@@ -94,5 +94,14 @@ namespace QuanLyThuVien
         private void label2_Click(object sender, EventArgs e)
         {
         }
+
+        private void btnCanel_Click(object sender, EventArgs e)
+        {
+            txBHovaTen.Text = string.Empty;
+            cmbLoaiDocGia.SelectedIndex = -1;
+            dateNgaySinh.Value = DateTime.Now;
+            txBDiaChi.Text = string.Empty;
+            txBEmail.Text = string.Empty;
+        }
     }
 }

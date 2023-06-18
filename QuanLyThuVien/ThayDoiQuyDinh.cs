@@ -62,5 +62,10 @@ namespace QuanLyThuVien
         {
 
         }
+
+        private void ThayDoiQuyDinh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
