@@ -51,10 +51,11 @@
             label2.Font = new Font("Arial", 28F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(206, 26);
             label2.Name = "label2";
-            label2.Size = new Size(342, 55);
+            label2.Size = new Size(406, 65);
             label2.TabIndex = 0;
             label2.Text = "Thêm Độc Giả";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // groupBox1
             // 
@@ -96,6 +97,7 @@
             btnTaoDocGia.TabIndex = 9;
             btnTaoDocGia.Text = "Tạo thẻ";
             btnTaoDocGia.UseVisualStyleBackColor = true;
+            btnTaoDocGia.Click += btnTaoDocGia_Click;
             // 
             // label7
             // 
@@ -103,7 +105,7 @@
             label7.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.Location = new Point(204, 214);
             label7.Name = "label7";
-            label7.Size = new Size(68, 24);
+            label7.Size = new Size(84, 29);
             label7.TabIndex = 8;
             label7.Text = "Email:";
             // 
@@ -113,7 +115,7 @@
             label6.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(204, 161);
             label6.Name = "label6";
-            label6.Size = new Size(81, 24);
+            label6.Size = new Size(99, 29);
             label6.TabIndex = 7;
             label6.Text = "Địa chỉ:";
             // 
@@ -123,7 +125,7 @@
             label5.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(174, 117);
             label5.Name = "label5";
-            label5.Size = new Size(111, 24);
+            label5.Size = new Size(135, 29);
             label5.TabIndex = 6;
             label5.Text = "Ngày sinh:";
             // 
@@ -133,7 +135,7 @@
             label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(156, 65);
             label4.Name = "label4";
-            label4.Size = new Size(132, 24);
+            label4.Size = new Size(162, 29);
             label4.TabIndex = 5;
             label4.Text = "Loại độc giả:";
             // 
@@ -143,50 +145,51 @@
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(174, 25);
             label3.Name = "label3";
-            label3.Size = new Size(113, 24);
+            label3.Size = new Size(135, 29);
             label3.TabIndex = 2;
             label3.Text = "Họ và Tên:";
             // 
             // txBEmail
             // 
-            txBEmail.Location = new Point(308, 213);
+            txBEmail.Location = new Point(340, 214);
             txBEmail.Name = "txBEmail";
-            txBEmail.Size = new Size(151, 25);
+            txBEmail.Size = new Size(184, 28);
             txBEmail.TabIndex = 4;
             // 
             // dateNgaySinh
             // 
             dateNgaySinh.Format = DateTimePickerFormat.Short;
-            dateNgaySinh.Location = new Point(308, 117);
+            dateNgaySinh.Location = new Point(340, 118);
             dateNgaySinh.Name = "dateNgaySinh";
-            dateNgaySinh.Size = new Size(108, 25);
+            dateNgaySinh.Size = new Size(184, 28);
             dateNgaySinh.TabIndex = 3;
             // 
             // cmbLoaiDocGia
             // 
             cmbLoaiDocGia.FormattingEnabled = true;
-            cmbLoaiDocGia.Location = new Point(308, 67);
+            cmbLoaiDocGia.Location = new Point(340, 65);
             cmbLoaiDocGia.Name = "cmbLoaiDocGia";
-            cmbLoaiDocGia.Size = new Size(92, 26);
+            cmbLoaiDocGia.Size = new Size(184, 29);
             cmbLoaiDocGia.TabIndex = 2;
             // 
             // txBDiaChi
             // 
-            txBDiaChi.Location = new Point(308, 161);
+            txBDiaChi.Location = new Point(340, 164);
             txBDiaChi.Name = "txBDiaChi";
-            txBDiaChi.Size = new Size(151, 25);
+            txBDiaChi.Size = new Size(184, 28);
             txBDiaChi.TabIndex = 1;
             // 
             // txBHovaTen
             // 
-            txBHovaTen.Location = new Point(308, 24);
+            txBHovaTen.Location = new Point(340, 25);
             txBHovaTen.Name = "txBHovaTen";
-            txBHovaTen.Size = new Size(151, 25);
+            txBHovaTen.Size = new Size(184, 28);
             txBHovaTen.TabIndex = 0;
+            txBHovaTen.TextChanged += txBHovaTen_TextChanged;
             // 
             // ThemDocGia
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(748, 454);
             Controls.Add(groupBox1);
@@ -194,6 +197,7 @@
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "ThemDocGia";
             Text = "Thêm Độc Giả";
+            Load += ThemDocGia_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
