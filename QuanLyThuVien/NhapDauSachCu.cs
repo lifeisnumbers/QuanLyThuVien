@@ -103,7 +103,7 @@ namespace QuanLyThuVien
 
                         for (int i = 0; i < SoLuong; i++)
                         {
-                            using (SqlCommand cmdCuonSach = new SqlCommand("INSERT INTO CuonSach (MaSach, TinhTrang) VALUES (@MaSach, 1)", connection))
+                            using (SqlCommand cmdCuonSach = new SqlCommand("INSERT INTO CuonSach (MaSach, TinhTrang, NgayNhap) VALUES (@MaSach, 1, GETDATE())", connection))
                             {
                                 cmdCuonSach.Parameters.AddWithValue("@MaSach", MaSach);
                                 cmdCuonSach.ExecuteNonQuery();
