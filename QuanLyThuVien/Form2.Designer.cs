@@ -28,40 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            monthCalendar1 = new MonthCalendar();
-            button1 = new Button();
             SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(71, 40);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(462, 159);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(monthCalendar1);
             Name = "Form2";
             Text = "Form2";
             ResumeLayout(false);
         }
 
         #endregion
-
-        private MonthCalendar monthCalendar1;
-        private Button button1;
     }
 }
