@@ -12,9 +12,9 @@ namespace QuanLyThuVien
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new HomeTable());
+            Application.Run(new ThemDocGia());
 
-            Application.Run(new Form2());
+       
 
         }
     }
