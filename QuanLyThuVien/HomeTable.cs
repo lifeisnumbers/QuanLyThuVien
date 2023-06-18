@@ -1,10 +1,12 @@
 namespace QuanLyThuVien
 {
-    public partial class Form1 : Form
+    public partial class HomeTable : Form
     {
-        public Form1()
+        public HomeTable()
         {
             InitializeComponent();
         }
+
+
     }
 }
