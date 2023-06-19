@@ -44,14 +44,16 @@
             txBDiaChi = new TextBox();
             txBHovaTen = new TextBox();
             panel1 = new Panel();
+            panel2 = new Panel();
             groupBox1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 28F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(206, 26);
+            label2.Location = new Point(181, 17);
             label2.Name = "label2";
             label2.Size = new Size(277, 45);
             label2.TabIndex = 0;
@@ -61,6 +63,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = SystemColors.MenuHighlight;
             groupBox1.Controls.Add(btnCanel);
             groupBox1.Controls.Add(btnTaoDocGia);
             groupBox1.Controls.Add(label7);
@@ -73,9 +76,10 @@
             groupBox1.Controls.Add(cmbLoaiDocGia);
             groupBox1.Controls.Add(txBDiaChi);
             groupBox1.Controls.Add(txBHovaTen);
-            groupBox1.Location = new Point(50, 84);
+            groupBox1.ForeColor = SystemColors.ControlText;
+            groupBox1.Location = new Point(24, 81);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(672, 358);
+            groupBox1.Size = new Size(677, 358);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin cần nhập:";
@@ -194,19 +198,28 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(489, 12);
+            panel1.Location = new Point(464, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(77, 77);
+            panel1.Size = new Size(77, 75);
             panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.Highlight;
+            panel2.Controls.Add(panel1);
+            panel2.Controls.Add(groupBox1);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(3, -2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(719, 453);
+            panel2.TabIndex = 3;
             // 
             // ThemDocGia
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(748, 454);
-            Controls.Add(panel1);
-            Controls.Add(groupBox1);
-            Controls.Add(label2);
+            ClientSize = new Size(720, 454);
+            Controls.Add(panel2);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "ThemDocGia";
             StartPosition = FormStartPosition.CenterScreen;
@@ -215,8 +228,9 @@
             Load += ThemDocGia_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -237,5 +251,6 @@
         private Button btnCanel;
         private Button btnTaoDocGia;
         private Panel panel1;
+        private Panel panel2;
     }
 }

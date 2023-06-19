@@ -36,8 +36,10 @@
             label1 = new Label();
             label2 = new Label();
             panel2 = new Panel();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataBaoCaoThangTheLoai).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -117,15 +119,24 @@
             panel2.Size = new Size(46, 48);
             panel2.TabIndex = 3;
             // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.Highlight;
+            panel3.Controls.Add(panel2);
+            panel3.Controls.Add(label2);
+            panel3.Controls.Add(label1);
+            panel3.Controls.Add(panel1);
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(628, 354);
+            panel3.TabIndex = 4;
+            // 
             // BaoCaoThangTheLoai
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(623, 366);
-            Controls.Add(panel2);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(panel1);
+            ClientSize = new Size(623, 353);
+            Controls.Add(panel3);
             Margin = new Padding(2);
             Name = "BaoCaoThangTheLoai";
             StartPosition = FormStartPosition.CenterScreen;
@@ -135,8 +146,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataBaoCaoThangTheLoai).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -148,5 +160,6 @@
         private Label label2;
         private Button btnExcelSave;
         private Panel panel2;
+        private Panel panel3;
     }
 }

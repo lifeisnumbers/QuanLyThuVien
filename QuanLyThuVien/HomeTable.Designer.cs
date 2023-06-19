@@ -44,12 +44,15 @@
             thayĐổiQuyĐịnhToolStripMenuItem = new ToolStripMenuItem();
             thoátToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            panel3 = new Panel();
             monthCalendar1 = new MonthCalendar();
             panel2 = new Panel();
+            label2 = new Label();
+            label1 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            checkBox1 = new CheckBox();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -59,7 +62,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { lậpĐộcGiảToolStripMenuItem, thêmSáchToolStripMenuItem, traCứuSáchToolStripMenuItem, mượnTrảSáchToolStripMenuItem, lậpBáoCáoToolStripMenuItem, thayĐổiQuyĐịnhToolStripMenuItem, thoátToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1215, 29);
+            menuStrip1.Size = new Size(1215, 28);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -67,7 +70,7 @@
             // 
             lậpĐộcGiảToolStripMenuItem.Image = (Image)resources.GetObject("lậpĐộcGiảToolStripMenuItem.Image");
             lậpĐộcGiảToolStripMenuItem.Name = "lậpĐộcGiảToolStripMenuItem";
-            lậpĐộcGiảToolStripMenuItem.Size = new Size(151, 25);
+            lậpĐộcGiảToolStripMenuItem.Size = new Size(107, 24);
             lậpĐộcGiảToolStripMenuItem.Text = "Lập Độc Giả";
             lậpĐộcGiảToolStripMenuItem.Click += lậpĐộcGiảToolStripMenuItem_Click;
             // 
@@ -76,14 +79,14 @@
             thêmSáchToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thêmĐầuSáchMớiToolStripMenuItem, thêmĐầuSáchCũToolStripMenuItem1 });
             thêmSáchToolStripMenuItem.Image = (Image)resources.GetObject("thêmSáchToolStripMenuItem.Image");
             thêmSáchToolStripMenuItem.Name = "thêmSáchToolStripMenuItem";
-            thêmSáchToolStripMenuItem.Size = new Size(143, 25);
+            thêmSáchToolStripMenuItem.Size = new Size(103, 24);
             thêmSáchToolStripMenuItem.Text = "Thêm Sách";
             // 
             // thêmĐầuSáchMớiToolStripMenuItem
             // 
             thêmĐầuSáchMớiToolStripMenuItem.Image = (Image)resources.GetObject("thêmĐầuSáchMớiToolStripMenuItem.Image");
             thêmĐầuSáchMớiToolStripMenuItem.Name = "thêmĐầuSáchMớiToolStripMenuItem";
-            thêmĐầuSáchMớiToolStripMenuItem.Size = new Size(282, 34);
+            thêmĐầuSáchMớiToolStripMenuItem.Size = new Size(191, 26);
             thêmĐầuSáchMớiToolStripMenuItem.Text = "Thêm đầu sách mới";
             thêmĐầuSáchMớiToolStripMenuItem.Click += thêmĐầuSáchMớiToolStripMenuItem_Click;
             // 
@@ -91,7 +94,7 @@
             // 
             thêmĐầuSáchCũToolStripMenuItem1.Image = (Image)resources.GetObject("thêmĐầuSáchCũToolStripMenuItem1.Image");
             thêmĐầuSáchCũToolStripMenuItem1.Name = "thêmĐầuSáchCũToolStripMenuItem1";
-            thêmĐầuSáchCũToolStripMenuItem1.Size = new Size(282, 34);
+            thêmĐầuSáchCũToolStripMenuItem1.Size = new Size(191, 26);
             thêmĐầuSáchCũToolStripMenuItem1.Text = "Thêm đầu sách cũ";
             thêmĐầuSáchCũToolStripMenuItem1.Click += thêmĐầuSáchCũToolStripMenuItem1_Click;
             // 
@@ -99,7 +102,7 @@
             // 
             traCứuSáchToolStripMenuItem.Image = (Image)resources.GetObject("traCứuSáchToolStripMenuItem.Image");
             traCứuSáchToolStripMenuItem.Name = "traCứuSáchToolStripMenuItem";
-            traCứuSáchToolStripMenuItem.Size = new Size(163, 25);
+            traCứuSáchToolStripMenuItem.Size = new Size(116, 24);
             traCứuSáchToolStripMenuItem.Text = "Tra Cứu Sách";
             traCứuSáchToolStripMenuItem.Click += traCứuSáchToolStripMenuItem_Click;
             // 
@@ -108,14 +111,14 @@
             mượnTrảSáchToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mượnSáchToolStripMenuItem, trảSáchToolStripMenuItem });
             mượnTrảSáchToolStripMenuItem.Image = (Image)resources.GetObject("mượnTrảSáchToolStripMenuItem.Image");
             mượnTrảSáchToolStripMenuItem.Name = "mượnTrảSáchToolStripMenuItem";
-            mượnTrảSáchToolStripMenuItem.Size = new Size(188, 25);
+            mượnTrảSáchToolStripMenuItem.Size = new Size(133, 24);
             mượnTrảSáchToolStripMenuItem.Text = "Mượn / Trả Sách";
             // 
             // mượnSáchToolStripMenuItem
             // 
             mượnSáchToolStripMenuItem.Image = (Image)resources.GetObject("mượnSáchToolStripMenuItem.Image");
             mượnSáchToolStripMenuItem.Name = "mượnSáchToolStripMenuItem";
-            mượnSáchToolStripMenuItem.Size = new Size(210, 34);
+            mượnSáchToolStripMenuItem.Size = new Size(145, 26);
             mượnSáchToolStripMenuItem.Text = "Mượn Sách";
             mượnSáchToolStripMenuItem.Click += mượnSáchToolStripMenuItem_Click;
             // 
@@ -123,7 +126,7 @@
             // 
             trảSáchToolStripMenuItem.Image = (Image)resources.GetObject("trảSáchToolStripMenuItem.Image");
             trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
-            trảSáchToolStripMenuItem.Size = new Size(210, 34);
+            trảSáchToolStripMenuItem.Size = new Size(145, 26);
             trảSáchToolStripMenuItem.Text = "Trả Sách";
             trảSáchToolStripMenuItem.Click += trảSáchToolStripMenuItem_Click;
             // 
@@ -132,14 +135,14 @@
             lậpBáoCáoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mượnSáchTheoThểLoạiToolStripMenuItem, thốngKêSáchTrảTrễToolStripMenuItem });
             lậpBáoCáoToolStripMenuItem.Image = (Image)resources.GetObject("lậpBáoCáoToolStripMenuItem.Image");
             lậpBáoCáoToolStripMenuItem.Name = "lậpBáoCáoToolStripMenuItem";
-            lậpBáoCáoToolStripMenuItem.Size = new Size(156, 25);
+            lậpBáoCáoToolStripMenuItem.Size = new Size(110, 24);
             lậpBáoCáoToolStripMenuItem.Text = "Lập Báo Cáo";
             // 
             // mượnSáchTheoThểLoạiToolStripMenuItem
             // 
             mượnSáchTheoThểLoạiToolStripMenuItem.Image = (Image)resources.GetObject("mượnSáchTheoThểLoạiToolStripMenuItem.Image");
             mượnSáchTheoThểLoạiToolStripMenuItem.Name = "mượnSáchTheoThểLoạiToolStripMenuItem";
-            mượnSáchTheoThểLoạiToolStripMenuItem.Size = new Size(321, 34);
+            mượnSáchTheoThểLoạiToolStripMenuItem.Size = new Size(216, 26);
             mượnSáchTheoThểLoạiToolStripMenuItem.Text = "Mượn sách theo thể loại";
             mượnSáchTheoThểLoạiToolStripMenuItem.Click += mượnSáchTheoThểLoạiToolStripMenuItem_Click;
             // 
@@ -147,7 +150,7 @@
             // 
             thốngKêSáchTrảTrễToolStripMenuItem.Image = (Image)resources.GetObject("thốngKêSáchTrảTrễToolStripMenuItem.Image");
             thốngKêSáchTrảTrễToolStripMenuItem.Name = "thốngKêSáchTrảTrễToolStripMenuItem";
-            thốngKêSáchTrảTrễToolStripMenuItem.Size = new Size(321, 34);
+            thốngKêSáchTrảTrễToolStripMenuItem.Size = new Size(216, 26);
             thốngKêSáchTrảTrễToolStripMenuItem.Text = "Thống kê sách trả trễ";
             thốngKêSáchTrảTrễToolStripMenuItem.Click += thốngKêSáchTrảTrễToolStripMenuItem_Click;
             // 
@@ -155,7 +158,7 @@
             // 
             thayĐổiQuyĐịnhToolStripMenuItem.Image = (Image)resources.GetObject("thayĐổiQuyĐịnhToolStripMenuItem.Image");
             thayĐổiQuyĐịnhToolStripMenuItem.Name = "thayĐổiQuyĐịnhToolStripMenuItem";
-            thayĐổiQuyĐịnhToolStripMenuItem.Size = new Size(202, 25);
+            thayĐổiQuyĐịnhToolStripMenuItem.Size = new Size(136, 24);
             thayĐổiQuyĐịnhToolStripMenuItem.Text = "Thay đổi quy định";
             thayĐổiQuyĐịnhToolStripMenuItem.Click += thayĐổiQuyĐịnhToolStripMenuItem_Click;
             // 
@@ -163,21 +166,30 @@
             // 
             thoátToolStripMenuItem.Image = (Image)resources.GetObject("thoátToolStripMenuItem.Image");
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            thoátToolStripMenuItem.Size = new Size(95, 25);
+            thoátToolStripMenuItem.Size = new Size(71, 24);
             thoátToolStripMenuItem.Text = "Thoát";
             // 
             // panel1
             // 
-            panel1.Controls.Add(checkBox1);
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(monthCalendar1);
             panel1.Location = new Point(0, 43);
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 606);
             panel1.TabIndex = 2;
             // 
+            // panel3
+            // 
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.BackgroundImageLayout = ImageLayout.Stretch;
+            panel3.Location = new Point(20, 186);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(227, 420);
+            panel3.TabIndex = 1;
+            // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(14, 0);
+            monthCalendar1.Location = new Point(14, 9);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
             // 
@@ -185,24 +197,38 @@
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label1);
             panel2.Location = new Point(256, 43);
             panel2.Name = "panel2";
             panel2.Size = new Size(959, 606);
             panel2.TabIndex = 3;
             // 
-            // checkBox1
+            // label2
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(39, 360);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(133, 25);
-            checkBox1.TabIndex = 1;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(255, 128, 0);
+            label2.Font = new Font("Broadway", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(413, 51);
+            label2.Name = "label2";
+            label2.Size = new Size(194, 42);
+            label2.TabIndex = 1;
+            label2.Text = "Thư Viện";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(255, 128, 0);
+            label1.Font = new Font("Broadway", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(236, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(179, 42);
+            label1.TabIndex = 0;
+            label1.Text = "Quản Lý";
             // 
             // HomeTable
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1215, 648);
             Controls.Add(panel2);
@@ -214,10 +240,12 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản lý thư viện";
             FormClosing += HomeTable_FormClosing;
+            Load += HomeTable_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,6 +269,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ToolStripMenuItem thayĐổiQuyĐịnhToolStripMenuItem;
         private ToolStripMenuItem thoátToolStripMenuItem;
-        private CheckBox checkBox1;
+        private Panel panel3;
+        private Label label2;
+        private Label label1;
     }
 }

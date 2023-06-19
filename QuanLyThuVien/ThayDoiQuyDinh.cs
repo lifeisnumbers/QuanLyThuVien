@@ -13,8 +13,10 @@ namespace QuanLyThuVien
 {
     public partial class ThayDoiQuyDinh : Form
     {
-        public ThayDoiQuyDinh()
+        private HomeTable hometable;
+        public ThayDoiQuyDinh(HomeTable hometable)
         {
+            this.hometable = hometable;
             InitializeComponent();
         }
 
@@ -70,10 +72,15 @@ namespace QuanLyThuVien
             {
                 // Hỏi người dùng xác nhận thoát
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (result == DialogResult.No)
                 {
                     // Nếu người dùng chọn No, hủy sự kiện FormClosing
                     e.Cancel = true;
+                }
+                else
+                {
+                    hometable.Show();
                 }
             }
         }
@@ -342,6 +349,11 @@ namespace QuanLyThuVien
             {
                 MessageBox.Show("Invalid TienPhatTraTre  value. Please enter a valid integer number.");
             }
+        }
+
+        private void ThayDoiQuyDinh_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
         }
     }
 }

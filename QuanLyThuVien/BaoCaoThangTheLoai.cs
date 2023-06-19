@@ -16,16 +16,16 @@ namespace QuanLyThuVien
 {
     public partial class BaoCaoThangTheLoai : Form
     {
-
-        public BaoCaoThangTheLoai()
+        private HomeTable hometable;
+        public BaoCaoThangTheLoai(HomeTable hometable)
         {
             InitializeComponent();
-
+            this.hometable = hometable;
         }
 
         private void BaoCaoThangTheLoai_Load(object sender, EventArgs e)
         {
-
+            MaximizeBox = false;
             string query = "EXEC BaoCaoThangTheLoai @TongLuotMuon OUTPUT";
 
             // Create the parameter for @TongLuotMuon
@@ -90,9 +90,9 @@ namespace QuanLyThuVien
                 worksheet.Cell(result.Rows.Count + 3, 2).Value = tongLuotMuon;
 
                 // Save the workbook
-                string filePath = "C:\\Users\\N E O\\Desktop\\ExcelTest\\bao_cao_ngay_" + ThangNam + ".xlsx";
+                /*string filePath = "C:\\Users\\N E O\\Desktop\\ExcelTest\\bao_cao_ngay_" + ThangNam + ".xlsx";
 
-                workbook.SaveAs(filePath);
+                workbook.SaveAs(filePath);*/
             }
 
             MessageBox.Show("Báo cáo đã được xuất thành công!");
@@ -104,10 +104,15 @@ namespace QuanLyThuVien
             {
                 // Hỏi người dùng xác nhận thoát
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (result == DialogResult.No)
                 {
                     // Nếu người dùng chọn No, hủy sự kiện FormClosing
                     e.Cancel = true;
+                }
+                else
+                {
+                    hometable.Show();
                 }
             }
         }

@@ -17,11 +17,13 @@ namespace QuanLyThuVien
     {
         private nxbDAO nxb_DAO;
         private DauSachDAO dauSach_DAO;
+        private HomeTable hometable;
         string connectionSTR = Program.ConnectionString;
 
-        public NhapDauSachCu()
+        public NhapDauSachCu(HomeTable hometable)
         {
             InitializeComponent();
+            this.hometable = hometable;
             nxb_DAO = new nxbDAO(Program.ConnectionString);
             dauSach_DAO = new DauSachDAO(Program.ConnectionString);
         }
@@ -53,6 +55,7 @@ namespace QuanLyThuVien
 
         private void NhapDauSachMoi_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
             LoadComboBox();
         }
 
@@ -132,10 +135,15 @@ namespace QuanLyThuVien
             {
                 // Hỏi người dùng xác nhận thoát
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (result == DialogResult.No)
                 {
                     // Nếu người dùng chọn No, hủy sự kiện FormClosing
                     e.Cancel = true;
+                }
+                else
+                {
+                    hometable.Show();
                 }
             }
         }

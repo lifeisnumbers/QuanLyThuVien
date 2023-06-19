@@ -56,5 +56,30 @@ namespace QuanLyThuVien
                 MessageBox.Show("Phát sinh lỗi: " + ex.Message);
             }
         }
+
+        private void PhieuThu_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+        }
+
+        private void PhieuThu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Hỏi người dùng xác nhận thoát
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    // Nếu người dùng chọn No, hủy sự kiện FormClosing
+                    e.Cancel = true;
+                }
+                else
+                {
+                    HomeTable homeTable = new HomeTable();
+                    homeTable.Show();
+                }
+            }
+        }
     }
 }

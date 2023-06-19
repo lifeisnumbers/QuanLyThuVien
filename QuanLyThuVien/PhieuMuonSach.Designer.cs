@@ -37,13 +37,15 @@
             btnMuonSach = new Button();
             btnCanel = new Button();
             panel1 = new Panel();
+            panel2 = new Panel();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(162, 20);
+            label1.Location = new Point(69, 21);
             label1.Name = "label1";
             label1.Size = new Size(249, 32);
             label1.TabIndex = 0;
@@ -53,7 +55,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(162, 70);
+            label2.Location = new Point(55, 78);
             label2.Name = "label2";
             label2.Size = new Size(97, 19);
             label2.TabIndex = 1;
@@ -63,7 +65,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(138, 106);
+            label3.Location = new Point(31, 122);
             label3.Name = "label3";
             label3.Size = new Size(121, 19);
             label3.TabIndex = 2;
@@ -71,21 +73,21 @@
             // 
             // txbMaDocGia
             // 
-            txbMaDocGia.Location = new Point(279, 68);
+            txbMaDocGia.Location = new Point(168, 78);
             txbMaDocGia.Name = "txbMaDocGia";
             txbMaDocGia.Size = new Size(185, 21);
             txbMaDocGia.TabIndex = 1;
             // 
             // txbMaCuonSach
             // 
-            txbMaCuonSach.Location = new Point(279, 116);
+            txbMaCuonSach.Location = new Point(168, 120);
             txbMaCuonSach.Name = "txbMaCuonSach";
             txbMaCuonSach.Size = new Size(185, 21);
             txbMaCuonSach.TabIndex = 2;
             // 
             // btnMuonSach
             // 
-            btnMuonSach.Location = new Point(188, 175);
+            btnMuonSach.Location = new Point(88, 184);
             btnMuonSach.Name = "btnMuonSach";
             btnMuonSach.Size = new Size(115, 43);
             btnMuonSach.TabIndex = 3;
@@ -95,7 +97,7 @@
             // 
             // btnCanel
             // 
-            btnCanel.Location = new Point(337, 175);
+            btnCanel.Location = new Point(209, 185);
             btnCanel.Name = "btnCanel";
             btnCanel.Size = new Size(106, 42);
             btnCanel.TabIndex = 4;
@@ -107,31 +109,42 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Location = new Point(417, 12);
+            panel1.Location = new Point(324, 11);
             panel1.Name = "panel1";
             panel1.Size = new Size(56, 51);
             panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.Highlight;
+            panel2.Controls.Add(panel1);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(txbMaDocGia);
+            panel2.Controls.Add(txbMaCuonSach);
+            panel2.Controls.Add(btnCanel);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(btnMuonSach);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(1, 1);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(450, 258);
+            panel2.TabIndex = 6;
             // 
             // PhieuMuonSach
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(546, 257);
-            Controls.Add(panel1);
-            Controls.Add(btnCanel);
-            Controls.Add(btnMuonSach);
-            Controls.Add(txbMaCuonSach);
-            Controls.Add(txbMaDocGia);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            ClientSize = new Size(452, 261);
+            Controls.Add(panel2);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Name = "PhieuMuonSach";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Phiếu mượn sách";
             FormClosing += PhieuMuonSach_FormClosing;
+            Load += PhieuMuonSach_Load;
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -144,5 +157,6 @@
         private Button btnMuonSach;
         private Button btnCanel;
         private Panel panel1;
+        private Panel panel2;
     }
 }

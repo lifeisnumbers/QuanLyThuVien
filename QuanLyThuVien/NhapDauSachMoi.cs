@@ -15,15 +15,17 @@ namespace QuanLyThuVien
 {
     public partial class NhapDauSachMoi : Form
     {
+        private HomeTable hometable;
         private TheLoaiDAO theloai_DAO;
         private nxbDAO nxb_DAO;
         private DauSachDAO dauSach_DAO;
 
         private int MaDauSach;
 
-        public NhapDauSachMoi()
+        public NhapDauSachMoi(HomeTable hometable)
         {
             InitializeComponent();
+            this.hometable = hometable;
             theloai_DAO = new TheLoaiDAO(Program.ConnectionString);
             nxb_DAO = new nxbDAO(Program.ConnectionString);
         }
@@ -114,6 +116,7 @@ namespace QuanLyThuVien
 
         private void NhapDauSachMoi_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
             LoadComboBox();
         }
 
@@ -181,6 +184,25 @@ namespace QuanLyThuVien
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void NhapDauSachMoi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Hỏi người dùng xác nhận thoát
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    // Nếu người dùng chọn No, hủy sự kiện FormClosing
+                    e.Cancel = true;
+                }
+                else
+                {
+                    hometable.Show();
+                }
             }
         }
     }

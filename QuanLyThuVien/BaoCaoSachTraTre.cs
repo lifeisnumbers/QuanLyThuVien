@@ -16,9 +16,11 @@ namespace QuanLyThuVien
 {
     public partial class BaoCaoSachTraTre : Form
     {
-        public BaoCaoSachTraTre()
-        {
+        private HomeTable hometable;
+        public BaoCaoSachTraTre(HomeTable hometable)
+        {   
             InitializeComponent();
+            this.hometable = hometable;
         }
 
         private void dataSachTraTre_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -28,6 +30,7 @@ namespace QuanLyThuVien
 
         private void BaoCaoSachTraTre_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
             string query = "EXEC BaoCaoTraTre";
 
             // Execute the stored procedure with the parameter
@@ -77,12 +80,31 @@ namespace QuanLyThuVien
                 worksheet.Cell(result.Rows.Count + 2, 2).Value = ThangNam;
 
                 // Save the workbook
-                string filePath = "C:\\Users\\N E O\\Desktop\\ExcelTest\\bao_cao_ngay_" + ThangNam + ".xlsx";
+                /*string filePath = "C:\\Users\\N E O\\Desktop\\ExcelTest\\bao_cao_ngay_" + ThangNam + ".xlsx";
 
-                workbook.SaveAs(filePath);
+                *//*workbook.SaveAs(filePath);*/
             }
 
             MessageBox.Show("Báo cáo đã được xuất thành công!");
+        }
+
+        private void BaoCaoSachTraTre_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Hỏi người dùng xác nhận thoát
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    // Nếu người dùng chọn No, hủy sự kiện FormClosing
+                    e.Cancel = true;
+                }
+                else
+                {
+                    hometable.Show();
+                }
+            }
         }
     }
 }

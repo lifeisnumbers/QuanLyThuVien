@@ -13,11 +13,13 @@ namespace QuanLyThuVien
 {
     public partial class PhieuMuonSach : Form
     {
+        private HomeTable hometable;
         string connectionString = Program.ConnectionString;
 
-        public PhieuMuonSach()
+        public PhieuMuonSach(HomeTable hometable)
         {
             InitializeComponent();
+            this.hometable = hometable;
         }
 
         private void btnMuonSach_Click(object sender, EventArgs e)
@@ -62,12 +64,23 @@ namespace QuanLyThuVien
             {
                 // Hỏi người dùng xác nhận thoát
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (result == DialogResult.No)
                 {
                     // Nếu người dùng chọn No, hủy sự kiện FormClosing
                     e.Cancel = true;
                 }
+                else
+                {
+               
+                    hometable.Show();
+                }
             }
+        }
+
+        private void PhieuMuonSach_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
         }
     }
 }

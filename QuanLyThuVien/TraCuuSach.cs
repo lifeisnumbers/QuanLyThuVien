@@ -14,7 +14,7 @@ namespace QuanLyThuVien
     public partial class TraCuuSach : Form
     {
         List<string> listItem;
-
+        private HomeTable hometable;
         private DataTable GetBooksByTenSach(string tenSach)
         {
             string query = "EXEC GetByTenSach @ten_tra_cuu";
@@ -37,6 +37,7 @@ namespace QuanLyThuVien
         }
         private void TraCuuSach_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
             listItem = new List<string>() { "Ten sach", "Ten the loai", "Ten tac gia" };
             cmbTimKiemTheo.DataSource = listItem;
         }
@@ -48,10 +49,11 @@ namespace QuanLyThuVien
             dataDanhSachSach.DataSource = TatCaTraCuu.Instance.ExecuteQuery(query);
         }
 
-        public TraCuuSach()
+        public TraCuuSach(HomeTable hometable)
         {
             InitializeComponent();
             LoadDataBook();
+            this.hometable = hometable;
         }
 
         private void txbTimKiem_TextChanged(object sender, EventArgs e)
@@ -86,10 +88,15 @@ namespace QuanLyThuVien
             {
                 // Hỏi người dùng xác nhận thoát
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (result == DialogResult.No)
                 {
                     // Nếu người dùng chọn No, hủy sự kiện FormClosing
                     e.Cancel = true;
+                }
+                else
+                {
+                    hometable.Show();
                 }
             }
         }

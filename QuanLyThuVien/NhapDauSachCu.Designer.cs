@@ -47,16 +47,18 @@
             txbMoney = new TextBox();
             label9 = new Label();
             panel2 = new Panel();
+            panel3 = new Panel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numSach).BeginInit();
             panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(284, 9);
+            label1.Location = new Point(279, 4);
             label1.Name = "label1";
             label1.Size = new Size(289, 37);
             label1.TabIndex = 0;
@@ -72,7 +74,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(txbSach);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(67, 74);
+            groupBox1.Location = new Point(62, 69);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(845, 222);
             groupBox1.TabIndex = 1;
@@ -107,9 +109,9 @@
             // 
             // txbNamXuatBan
             // 
-            txbNamXuatBan.Location = new Point(651, 130);
+            txbNamXuatBan.Location = new Point(592, 127);
             txbNamXuatBan.Name = "txbNamXuatBan";
-            txbNamXuatBan.Size = new Size(159, 21);
+            txbNamXuatBan.Size = new Size(118, 21);
             txbNamXuatBan.TabIndex = 4;
             // 
             // label6
@@ -174,7 +176,7 @@
             panel1.Controls.Add(label9);
             panel1.Controls.Add(numSach);
             panel1.Controls.Add(label8);
-            panel1.Location = new Point(67, 302);
+            panel1.Location = new Point(62, 297);
             panel1.Name = "panel1";
             panel1.Size = new Size(845, 157);
             panel1.TabIndex = 14;
@@ -223,20 +225,29 @@
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.None;
-            panel2.Location = new Point(579, 9);
+            panel2.Location = new Point(574, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(50, 48);
             panel2.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.Highlight;
+            panel3.Controls.Add(panel2);
+            panel3.Controls.Add(panel1);
+            panel3.Controls.Add(groupBox1);
+            panel3.Controls.Add(label1);
+            panel3.Location = new Point(-2, -2);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(958, 503);
+            panel3.TabIndex = 16;
             // 
             // NhapDauSachCu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(954, 501);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Controls.Add(groupBox1);
-            Controls.Add(label1);
+            Controls.Add(panel3);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(4, 3, 4, 3);
             Name = "NhapDauSachCu";
@@ -249,8 +260,9 @@
             ((System.ComponentModel.ISupportInitialize)numSach).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -273,5 +285,6 @@
         private ComboBox cmbDauSach;
         private ComboBox cmbNXB;
         private Panel panel2;
+        private Panel panel3;
     }
 }

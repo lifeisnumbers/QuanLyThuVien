@@ -15,14 +15,17 @@ namespace QuanLyThuVien
 {
     public partial class ThemDocGia : Form
     {
+        private HomeTable hometable;
         private LoaiDocGiaDAO loaiDocGiaDAO;
-        public ThemDocGia()
+        public ThemDocGia(HomeTable hometable)
         {
             InitializeComponent();
+            this.hometable = hometable;
             loaiDocGiaDAO = new LoaiDocGiaDAO(Program.ConnectionString);
         }
         private void ThemDocGia_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
             Load_LoaiDocGia();
         }
 
@@ -118,8 +121,7 @@ namespace QuanLyThuVien
                 }
                 else
                 {
-                    HomeTable homeTable= new HomeTable();
-                    homeTable.Show();
+                    hometable.Show();
                 }
             }
         }
