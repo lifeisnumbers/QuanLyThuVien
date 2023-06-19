@@ -60,7 +60,7 @@
             label1.Font = new Font("Arial", 25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(153, 9);
             label1.Name = "label1";
-            label1.Size = new Size(339, 40);
+            label1.Size = new Size(503, 59);
             label1.TabIndex = 0;
             label1.Text = "Nhập đầu sách mới ";
             // 
@@ -102,9 +102,9 @@
             // cmbTenTacGia
             // 
             cmbTenTacGia.FormattingEnabled = true;
-            cmbTenTacGia.Location = new Point(225, 70);
+            cmbTenTacGia.Location = new Point(285, 73);
             cmbTenTacGia.Name = "cmbTenTacGia";
-            cmbTenTacGia.Size = new Size(181, 23);
+            cmbTenTacGia.Size = new Size(181, 29);
             cmbTenTacGia.TabIndex = 2;
             // 
             // label3
@@ -113,15 +113,15 @@
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(111, 70);
             label3.Name = "label3";
-            label3.Size = new Size(98, 19);
+            label3.Size = new Size(146, 29);
             label3.TabIndex = 2;
             label3.Text = "Tên tác giả:";
             // 
             // txbTenDauSach
             // 
-            txbTenDauSach.Location = new Point(225, 38);
+            txbTenDauSach.Location = new Point(285, 36);
             txbTenDauSach.Name = "txbTenDauSach";
-            txbTenDauSach.Size = new Size(181, 21);
+            txbTenDauSach.Size = new Size(181, 28);
             txbTenDauSach.TabIndex = 1;
             // 
             // label2
@@ -130,7 +130,7 @@
             label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(91, 38);
             label2.Name = "label2";
-            label2.Size = new Size(118, 19);
+            label2.Size = new Size(174, 29);
             label2.TabIndex = 0;
             label2.Text = "Tên đầu sách:";
             // 
@@ -179,7 +179,7 @@
             // 
             txbTriGia.Location = new Point(425, 111);
             txbTriGia.Name = "txbTriGia";
-            txbTriGia.Size = new Size(100, 21);
+            txbTriGia.Size = new Size(100, 28);
             txbTriGia.TabIndex = 5;
             // 
             // label9
@@ -188,7 +188,7 @@
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label9.Location = new Point(358, 113);
             label9.Name = "label9";
-            label9.Size = new Size(61, 19);
+            label9.Size = new Size(92, 29);
             label9.TabIndex = 16;
             label9.Text = "Trị giá:";
             // 
@@ -196,7 +196,7 @@
             // 
             soluong.Location = new Point(222, 114);
             soluong.Name = "soluong";
-            soluong.Size = new Size(37, 21);
+            soluong.Size = new Size(37, 28);
             soluong.TabIndex = 4;
             // 
             // label8
@@ -205,7 +205,7 @@
             label8.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label8.Location = new Point(119, 114);
             label8.Name = "label8";
-            label8.Size = new Size(87, 19);
+            label8.Size = new Size(129, 29);
             label8.TabIndex = 14;
             label8.Text = "Số lượng:";
             // 
@@ -213,7 +213,7 @@
             // 
             txbNamXuatBan.Location = new Point(282, 62);
             txbNamXuatBan.Name = "txbNamXuatBan";
-            txbNamXuatBan.Size = new Size(137, 21);
+            txbNamXuatBan.Size = new Size(137, 28);
             txbNamXuatBan.TabIndex = 3;
             // 
             // label6
@@ -222,7 +222,7 @@
             label6.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(164, 62);
             label6.Name = "label6";
-            label6.Size = new Size(120, 19);
+            label6.Size = new Size(177, 29);
             label6.TabIndex = 4;
             label6.Text = "Năm xuất bản:\r\n";
             // 
@@ -231,7 +231,7 @@
             cmbNhaXuatBan.FormattingEnabled = true;
             cmbNhaXuatBan.Location = new Point(427, 14);
             cmbNhaXuatBan.Name = "cmbNhaXuatBan";
-            cmbNhaXuatBan.Size = new Size(130, 23);
+            cmbNhaXuatBan.Size = new Size(130, 29);
             cmbNhaXuatBan.TabIndex = 2;
             // 
             // label5
@@ -240,7 +240,7 @@
             label5.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(305, 16);
             label5.Name = "label5";
-            label5.Size = new Size(116, 19);
+            label5.Size = new Size(171, 29);
             label5.TabIndex = 2;
             label5.Text = "Nhà xuất bản:";
             // 
@@ -248,7 +248,7 @@
             // 
             txbTenSach.Location = new Point(124, 14);
             txbTenSach.Name = "txbTenSach";
-            txbTenSach.Size = new Size(137, 21);
+            txbTenSach.Size = new Size(137, 28);
             txbTenSach.TabIndex = 1;
             // 
             // label4
@@ -257,13 +257,13 @@
             label4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(38, 16);
             label4.Name = "label4";
-            label4.Size = new Size(85, 19);
+            label4.Size = new Size(124, 29);
             label4.TabIndex = 0;
             label4.Text = "Tên sách:";
             // 
             // NhapDauSachMoi
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(615, 535);
             Controls.Add(panel1);

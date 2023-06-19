@@ -9,8 +9,10 @@
 
         private void lậpĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Hide();
             ThemDocGia themDocGia = new ThemDocGia();
             themDocGia.ShowDialog();
+
         }
         private void thêmĐầuSáchMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
