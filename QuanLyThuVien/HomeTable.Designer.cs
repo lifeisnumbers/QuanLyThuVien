@@ -148,6 +148,7 @@
             thốngKêSáchTrảTrễToolStripMenuItem.Name = "thốngKêSáchTrảTrễToolStripMenuItem";
             thốngKêSáchTrảTrễToolStripMenuItem.Size = new Size(216, 26);
             thốngKêSáchTrảTrễToolStripMenuItem.Text = "Thống kê sách trả trễ";
+            thốngKêSáchTrảTrễToolStripMenuItem.Click += thốngKêSáchTrảTrễToolStripMenuItem_Click;
             // 
             // thayĐổiQuyĐịnhToolStripMenuItem
             // 
@@ -174,7 +175,7 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(0, 117);
+            monthCalendar1.Location = new Point(14, 0);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 0;
             // 

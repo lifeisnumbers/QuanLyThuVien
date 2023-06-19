@@ -77,12 +77,12 @@
             // dataBaoCaoThangTheLoai
             // 
             dataBaoCaoThangTheLoai.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataBaoCaoThangTheLoai.Location = new Point(2, 11);
+            dataBaoCaoThangTheLoai.Location = new Point(39, 11);
             dataBaoCaoThangTheLoai.Margin = new Padding(2);
             dataBaoCaoThangTheLoai.Name = "dataBaoCaoThangTheLoai";
             dataBaoCaoThangTheLoai.RowHeadersWidth = 62;
             dataBaoCaoThangTheLoai.RowTemplate.Height = 33;
-            dataBaoCaoThangTheLoai.Size = new Size(611, 191);
+            dataBaoCaoThangTheLoai.Size = new Size(524, 191);
             dataBaoCaoThangTheLoai.TabIndex = 0;
             // 
             // label1

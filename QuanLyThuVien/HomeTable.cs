@@ -69,5 +69,11 @@
             }
 
         }
+
+        private void thốngKêSáchTrảTrễToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaoCaoSachTraTre baoCaoSachTraTre = new BaoCaoSachTraTre();
+            baoCaoSachTraTre.ShowDialog();
+        }
     }
 }
