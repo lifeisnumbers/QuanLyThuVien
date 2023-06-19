@@ -62,8 +62,6 @@ namespace QuanLyThuVien
             DateTime now = DateTime.Now;
             string ThangNam = now.ToString("dd_MM_yyyy");
 
-            dataBaoCaoThangTheLoai.DataSource = result;
-
             // Convert the DataTable to Excel
             using (XLWorkbook workbook = new XLWorkbook())
             {
