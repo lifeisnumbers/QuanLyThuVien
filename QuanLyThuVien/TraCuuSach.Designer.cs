@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraCuuSach));
             label1 = new Label();
             groupBox1 = new GroupBox();
             txbTimKiem = new TextBox();
             dataDanhSachSach = new DataGridView();
             cmbTimKiemTheo = new ComboBox();
+            panel1 = new Panel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataDanhSachSach).BeginInit();
             SuspendLayout();
@@ -43,7 +45,7 @@
             label1.Font = new Font("Arial", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(274, 20);
             label1.Name = "label1";
-            label1.Size = new Size(385, 66);
+            label1.Size = new Size(257, 45);
             label1.TabIndex = 0;
             label1.Text = "Tra cứu sách";
             // 
@@ -63,8 +65,8 @@
             // 
             txbTimKiem.Location = new Point(263, 52);
             txbTimKiem.Name = "txbTimKiem";
-            txbTimKiem.Size = new Size(457, 35);
-            txbTimKiem.TabIndex = 5;
+            txbTimKiem.Size = new Size(457, 26);
+            txbTimKiem.TabIndex = 2;
             txbTimKiem.TextChanged += txbTimKiem_TextChanged;
             // 
             // dataDanhSachSach
@@ -82,20 +84,32 @@
             cmbTimKiemTheo.FormattingEnabled = true;
             cmbTimKiemTheo.Location = new Point(37, 52);
             cmbTimKiemTheo.Name = "cmbTimKiemTheo";
-            cmbTimKiemTheo.Size = new Size(209, 37);
-            cmbTimKiemTheo.TabIndex = 2;
+            cmbTimKiemTheo.Size = new Size(209, 27);
+            cmbTimKiemTheo.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(537, 20);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(75, 53);
+            panel1.TabIndex = 2;
             // 
             // TraCuuSach
             // 
-            AutoScaleDimensions = new SizeF(15F, 29F);
+            AutoScaleDimensions = new SizeF(10F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(812, 540);
+            Controls.Add(panel1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "TraCuuSach";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Tra cứu sách";
+            FormClosing += TraCuuSach_FormClosing;
             Load += TraCuuSach_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -111,5 +125,6 @@
         private DataGridView dataDanhSachSach;
         private ComboBox cmbTimKiemTheo;
         private TextBox txbTimKiem;
+        private Panel panel1;
     }
 }

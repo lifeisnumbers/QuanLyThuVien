@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThayDoiQuyDinh));
             label1 = new Label();
             groupBox1 = new GroupBox();
             btnMuonTraSach = new Button();
@@ -53,6 +54,7 @@
             label5 = new Label();
             btnThayDoiQuyDinh3 = new Button();
             btnThayDoiQuyDinh1 = new Button();
+            panel4 = new Panel();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numHetHan).BeginInit();
@@ -69,9 +71,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(269, 9);
+            label1.Location = new Point(270, 24);
             label1.Name = "label1";
-            label1.Size = new Size(430, 46);
+            label1.Size = new Size(353, 37);
             label1.TabIndex = 0;
             label1.Text = "Thay đổi các quy định";
             // 
@@ -80,6 +82,7 @@
             groupBox1.Controls.Add(btnMuonTraSach);
             groupBox1.Controls.Add(btnQDnhapsach);
             groupBox1.Controls.Add(btnQDdocgia);
+            groupBox1.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.Location = new Point(43, 81);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(912, 125);
@@ -102,7 +105,7 @@
             btnQDnhapsach.Location = new Point(586, 43);
             btnQDnhapsach.Name = "btnQDnhapsach";
             btnQDnhapsach.Size = new Size(215, 47);
-            btnQDnhapsach.TabIndex = 1;
+            btnQDnhapsach.TabIndex = 3;
             btnQDnhapsach.Text = "Quy định về nhập sách";
             btnQDnhapsach.UseVisualStyleBackColor = true;
             btnQDnhapsach.Click += btnQDnhapsach_Click;
@@ -112,7 +115,7 @@
             btnQDdocgia.Location = new Point(79, 43);
             btnQDdocgia.Name = "btnQDdocgia";
             btnQDdocgia.Size = new Size(215, 47);
-            btnQDdocgia.TabIndex = 0;
+            btnQDdocgia.TabIndex = 1;
             btnQDdocgia.Text = "Quy định về độc giả";
             btnQDdocgia.UseVisualStyleBackColor = true;
             btnQDdocgia.Click += btnQDdocgia_Click;
@@ -136,7 +139,7 @@
             numHetHan.Location = new Point(710, 37);
             numHetHan.Margin = new Padding(5);
             numHetHan.Name = "numHetHan";
-            numHetHan.Size = new Size(39, 29);
+            numHetHan.Size = new Size(39, 24);
             numHetHan.TabIndex = 5;
             // 
             // label4
@@ -144,7 +147,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(543, 39);
             label4.Name = "label4";
-            label4.Size = new Size(159, 22);
+            label4.Size = new Size(125, 17);
             label4.TabIndex = 4;
             label4.Text = "Thời gian hết hạn:";
             // 
@@ -153,7 +156,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(267, 37);
             label3.Name = "label3";
-            label3.Size = new Size(145, 22);
+            label3.Size = new Size(112, 17);
             label3.TabIndex = 3;
             label3.Text = "Độ tuổi tối thiểu:";
             // 
@@ -162,7 +165,7 @@
             numMinTuoi.Location = new Point(419, 35);
             numMinTuoi.Margin = new Padding(4);
             numMinTuoi.Name = "numMinTuoi";
-            numMinTuoi.Size = new Size(42, 29);
+            numMinTuoi.Size = new Size(42, 24);
             numMinTuoi.TabIndex = 2;
             // 
             // numMaxTuoi
@@ -170,7 +173,7 @@
             numMaxTuoi.Location = new Point(173, 35);
             numMaxTuoi.Margin = new Padding(4);
             numMaxTuoi.Name = "numMaxTuoi";
-            numMaxTuoi.Size = new Size(42, 29);
+            numMaxTuoi.Size = new Size(42, 24);
             numMaxTuoi.TabIndex = 1;
             // 
             // label2
@@ -178,7 +181,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(40, 37);
             label2.Name = "label2";
-            label2.Size = new Size(126, 22);
+            label2.Size = new Size(97, 17);
             label2.TabIndex = 0;
             label2.Text = "Độ tuổi tối đa:";
             // 
@@ -212,7 +215,7 @@
             // 
             txbTienPhat.Location = new Point(662, 31);
             txbTienPhat.Name = "txbTienPhat";
-            txbTienPhat.Size = new Size(125, 29);
+            txbTienPhat.Size = new Size(125, 24);
             txbTienPhat.TabIndex = 5;
             // 
             // label6
@@ -220,7 +223,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(564, 31);
             label6.Name = "label6";
-            label6.Size = new Size(92, 22);
+            label6.Size = new Size(71, 17);
             label6.TabIndex = 4;
             label6.Text = "Tiền phạt:";
             // 
@@ -229,7 +232,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(326, 28);
             label7.Name = "label7";
-            label7.Size = new Size(135, 22);
+            label7.Size = new Size(104, 17);
             label7.TabIndex = 3;
             label7.Text = "Số ngày tối đa:";
             // 
@@ -238,7 +241,7 @@
             numberNgayMax.Location = new Point(468, 28);
             numberNgayMax.Margin = new Padding(4);
             numberNgayMax.Name = "numberNgayMax";
-            numberNgayMax.Size = new Size(42, 29);
+            numberNgayMax.Size = new Size(42, 24);
             numberNgayMax.TabIndex = 2;
             // 
             // numberMaxSoSach
@@ -246,7 +249,7 @@
             numberMaxSoSach.Location = new Point(252, 24);
             numberMaxSoSach.Margin = new Padding(4);
             numberMaxSoSach.Name = "numberMaxSoSach";
-            numberMaxSoSach.Size = new Size(42, 29);
+            numberMaxSoSach.Size = new Size(42, 24);
             numberMaxSoSach.TabIndex = 1;
             // 
             // label8
@@ -254,7 +257,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(13, 26);
             label8.Name = "label8";
-            label8.Size = new Size(242, 22);
+            label8.Size = new Size(190, 17);
             label8.TabIndex = 0;
             label8.Text = "Số sách tối đa được mượn:";
             // 
@@ -272,7 +275,7 @@
             // 
             numberKhoangCachXB.Location = new Point(445, 18);
             numberKhoangCachXB.Name = "numberKhoangCachXB";
-            numberKhoangCachXB.Size = new Size(54, 29);
+            numberKhoangCachXB.Size = new Size(54, 24);
             numberKhoangCachXB.TabIndex = 1;
             // 
             // label5
@@ -280,7 +283,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(239, 21);
             label5.Name = "label5";
-            label5.Size = new Size(200, 22);
+            label5.Size = new Size(157, 17);
             label5.TabIndex = 0;
             label5.Text = "Khoảng cách xuất bản:";
             // 
@@ -307,11 +310,21 @@
             btnThayDoiQuyDinh1.UseVisualStyleBackColor = false;
             btnThayDoiQuyDinh1.Visible = false;
             // 
+            // panel4
+            // 
+            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
+            panel4.BackgroundImageLayout = ImageLayout.None;
+            panel4.Location = new Point(628, 9);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(66, 63);
+            panel4.TabIndex = 12;
+            // 
             // ThayDoiQuyDinh
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 452);
+            Controls.Add(panel4);
             Controls.Add(btnThayDoiQuyDinh1);
             Controls.Add(btnThayDoiQuyDinh3);
             Controls.Add(panel3);
@@ -323,7 +336,9 @@
             Font = new Font("Arial", 11F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4);
             Name = "ThayDoiQuyDinh";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Thay Đổi Quy Định";
+            FormClosing += ThayDoiQuyDinh_FormClosing;
             groupBox1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -368,5 +383,6 @@
         private Label label5;
         private Button btnThayDoiQuyDinh3;
         private Button btnThayDoiQuyDinh1;
+        private Panel panel4;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhapDauSachCu));
             label1 = new Label();
             groupBox1 = new GroupBox();
             cmbNXB = new ComboBox();
@@ -45,6 +46,7 @@
             btnNhapSach = new Button();
             txbMoney = new TextBox();
             label9 = new Label();
+            panel2 = new Panel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numSach).BeginInit();
             panel1.SuspendLayout();
@@ -56,9 +58,9 @@
             label1.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(284, 9);
             label1.Name = "label1";
-            label1.Size = new Size(387, 56);
+            label1.Size = new Size(289, 37);
             label1.TabIndex = 0;
-            label1.Text = "Nhập sách mới:";
+            label1.Text = "Nhập đầu sách cũ";
             // 
             // groupBox1
             // 
@@ -82,16 +84,16 @@
             cmbNXB.FormattingEnabled = true;
             cmbNXB.Location = new Point(217, 127);
             cmbNXB.Name = "cmbNXB";
-            cmbNXB.Size = new Size(198, 29);
-            cmbNXB.TabIndex = 13;
+            cmbNXB.Size = new Size(198, 23);
+            cmbNXB.TabIndex = 3;
             // 
             // cmbDauSach
             // 
             cmbDauSach.FormattingEnabled = true;
             cmbDauSach.Location = new Point(217, 63);
             cmbDauSach.Name = "cmbDauSach";
-            cmbDauSach.Size = new Size(198, 29);
-            cmbDauSach.TabIndex = 12;
+            cmbDauSach.Size = new Size(198, 23);
+            cmbDauSach.TabIndex = 1;
             // 
             // label7
             // 
@@ -99,7 +101,7 @@
             label7.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label7.Location = new Point(25, 127);
             label7.Name = "label7";
-            label7.Size = new Size(171, 29);
+            label7.Size = new Size(116, 19);
             label7.TabIndex = 11;
             label7.Text = "Nhà xuất bản:";
             // 
@@ -107,8 +109,8 @@
             // 
             txbNamXuatBan.Location = new Point(651, 130);
             txbNamXuatBan.Name = "txbNamXuatBan";
-            txbNamXuatBan.Size = new Size(159, 28);
-            txbNamXuatBan.TabIndex = 10;
+            txbNamXuatBan.Size = new Size(159, 21);
+            txbNamXuatBan.TabIndex = 4;
             // 
             // label6
             // 
@@ -116,7 +118,7 @@
             label6.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(468, 127);
             label6.Name = "label6";
-            label6.Size = new Size(177, 29);
+            label6.Size = new Size(120, 19);
             label6.TabIndex = 9;
             label6.Text = "Năm xuất bản:";
             // 
@@ -126,7 +128,7 @@
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(468, 63);
             label3.Name = "label3";
-            label3.Size = new Size(124, 29);
+            label3.Size = new Size(85, 19);
             label3.TabIndex = 4;
             label3.Text = "Tên sách:";
             // 
@@ -134,8 +136,8 @@
             // 
             txbSach.Location = new Point(592, 62);
             txbSach.Name = "txbSach";
-            txbSach.Size = new Size(218, 28);
-            txbSach.TabIndex = 3;
+            txbSach.Size = new Size(218, 21);
+            txbSach.TabIndex = 2;
             // 
             // label2
             // 
@@ -143,7 +145,7 @@
             label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(22, 63);
             label2.Name = "label2";
-            label2.Size = new Size(174, 29);
+            label2.Size = new Size(118, 19);
             label2.TabIndex = 1;
             label2.Text = "Tên đầu sách:";
             // 
@@ -151,8 +153,8 @@
             // 
             numSach.Location = new Point(267, 17);
             numSach.Name = "numSach";
-            numSach.Size = new Size(38, 28);
-            numSach.TabIndex = 2;
+            numSach.Size = new Size(38, 21);
+            numSach.TabIndex = 5;
             // 
             // label8
             // 
@@ -160,7 +162,7 @@
             label8.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label8.Location = new Point(136, 18);
             label8.Name = "label8";
-            label8.Size = new Size(129, 29);
+            label8.Size = new Size(87, 19);
             label8.TabIndex = 13;
             label8.Text = "Số lượng:";
             // 
@@ -183,7 +185,7 @@
             btnCanel.Location = new Point(455, 91);
             btnCanel.Name = "btnCanel";
             btnCanel.Size = new Size(90, 45);
-            btnCanel.TabIndex = 16;
+            btnCanel.TabIndex = 8;
             btnCanel.Text = "Hủy";
             btnCanel.UseVisualStyleBackColor = true;
             btnCanel.Click += btnCanel_Click;
@@ -191,10 +193,10 @@
             // btnNhapSach
             // 
             btnNhapSach.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNhapSach.Location = new Point(280, 91);
+            btnNhapSach.Location = new Point(291, 91);
             btnNhapSach.Name = "btnNhapSach";
             btnNhapSach.Size = new Size(124, 45);
-            btnNhapSach.TabIndex = 15;
+            btnNhapSach.TabIndex = 7;
             btnNhapSach.Text = "Nhập sách";
             btnNhapSach.UseVisualStyleBackColor = true;
             btnNhapSach.Click += btnNhapSach_Click;
@@ -203,8 +205,8 @@
             // 
             txbMoney.Location = new Point(651, 14);
             txbMoney.Name = "txbMoney";
-            txbMoney.Size = new Size(128, 28);
-            txbMoney.TabIndex = 13;
+            txbMoney.Size = new Size(128, 21);
+            txbMoney.TabIndex = 6;
             // 
             // label9
             // 
@@ -212,22 +214,34 @@
             label9.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label9.Location = new Point(533, 13);
             label9.Name = "label9";
-            label9.Size = new Size(92, 29);
+            label9.Size = new Size(61, 19);
             label9.TabIndex = 14;
             label9.Text = "Trị giá:";
             // 
-            // NhapDauSachMoi
+            // panel2
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImageLayout = ImageLayout.None;
+            panel2.Location = new Point(579, 9);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(50, 48);
+            panel2.TabIndex = 15;
+            // 
+            // NhapDauSachCu
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(954, 501);
+            Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "NhapDauSachMoi";
+            Name = "NhapDauSachCu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Nhập đầu sách mới ";
+            FormClosing += NhapDauSachCu_FormClosing;
             Load += NhapDauSachMoi_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -257,5 +271,6 @@
         private Button btnNhapSach;
         private ComboBox cmbDauSach;
         private ComboBox cmbNXB;
+        private Panel panel2;
     }
 }
