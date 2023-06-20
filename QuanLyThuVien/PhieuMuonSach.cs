@@ -16,6 +16,10 @@ namespace QuanLyThuVien
         private HomeTable hometable;
         string connectionString = Program.ConnectionString;
 
+        public string TenSach;
+        public string TenTheLoai;
+        public string TenTacGia;
+
         public PhieuMuonSach(HomeTable hometable)
         {
             InitializeComponent();
@@ -40,9 +44,25 @@ namespace QuanLyThuVien
                         command.Parameters.AddWithValue("@MaDocGia", MaDocGia);
                         command.Parameters.AddWithValue("@MaCuonSach", MaCuonSach);
 
+                        // Output parameters
+                        command.Parameters.Add("@TenSach", SqlDbType.NVarChar, 100).Direction = ParameterDirection.Output;
+                        command.Parameters.Add("@TenTheLoai", SqlDbType.NVarChar, 100).Direction = ParameterDirection.Output;
+                        command.Parameters.Add("@TenTacGia", SqlDbType.NVarChar, 100).Direction = ParameterDirection.Output;
+                        command.Parameters.Add("@TenDocGia", SqlDbType.NVarChar, 100).Direction= ParameterDirection.Output;
                         command.ExecuteNonQuery();
 
-                        MessageBox.Show("Đọc giả đã mượn sách!");
+                        // Retrieve output parameter values
+                        string tenSach = command.Parameters["@TenSach"].Value.ToString();
+                        string tenTheLoai = command.Parameters["@TenTheLoai"].Value.ToString();
+                        string tenTacGia = command.Parameters["@TenTacGia"].Value.ToString();
+                        string tenDocGia = command.Parameters["@TenDocGia"].Value.ToString();
+
+
+                        this.Hide();
+                        SubFormMuonSach subMuonSach = new SubFormMuonSach(txbMaDocGia.Text, tenDocGia, txbMaCuonSach.Text, tenSach, tenTheLoai, tenTacGia);
+                        subMuonSach.ShowDialog();
+                        subMuonSach = null;
+                        this.Show();
                     }
                 }
             }
@@ -72,7 +92,7 @@ namespace QuanLyThuVien
                 }
                 else
                 {
-               
+
                     hometable.Show();
                 }
             }

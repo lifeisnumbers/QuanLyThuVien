@@ -89,10 +89,10 @@ namespace QuanLyThuVien
                 worksheet.Cell(result.Rows.Count + 3, 1).Value = "Tổng lượt mượn:";
                 worksheet.Cell(result.Rows.Count + 3, 2).Value = tongLuotMuon;
 
-                // Save the workbook
-                /*string filePath = "C:\\Users\\N E O\\Desktop\\ExcelTest\\bao_cao_ngay_" + ThangNam + ".xlsx";
+                 //Save the workbook
+                string filePath = "C:\\Users\\N E O\\Desktop\\ExcelTest\\bao_cao_ngay_" + ThangNam + ".xlsx";
 
-                workbook.SaveAs(filePath);*/
+                workbook.SaveAs(filePath);
             }
 
             MessageBox.Show("Báo cáo đã được xuất thành công!");
