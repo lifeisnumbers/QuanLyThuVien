@@ -49,5 +49,10 @@ namespace QuanLyThuVien
                 MessageBox.Show("Gặp lỗi khi lưu file: " + ex.Message);
             }
         }
+
+        private void SubFormMuonSach_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+        }
     }
 }

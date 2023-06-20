@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class SubFormTraSach : Form
+    public partial class TraCuuDocGia : Form
     {
-        public SubFormTraSach()
+        public TraCuuDocGia()
         {
             InitializeComponent();
         }
 
-        private void SubFormTraSach_Load(object sender, EventArgs e)
+        private void TraCuuDocGia_Load(object sender, EventArgs e)
         {
             MaximizeBox = false;
         }
